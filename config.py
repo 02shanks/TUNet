@@ -69,7 +69,7 @@ class CONFIG:
         
         data_path = "/content/drive/MyDrive/Colab_Notebooks/HF_contri/tunet/data"
         
-        data_dir = {'vctk': {'root': f'{data_path}/vivos/',
+        data_dir = {'vivos': {'root': f'{data_path}/vivos/',
                              'train': f'{data_path}/vivos/train.txt',
                              'test': f'{data_path}/vivos/test.txt'}}
         
