@@ -60,12 +60,19 @@ class CONFIG:
         'root' is the path to the dataset and each line of the train.txt/test.txt files should contains the path to an
         audio file from 'root'. 
         '''
-        data_dir = {'vctk': {'root': 'data/vctk/wav48',
-                             'train': "data/vctk/train.txt",
-                             'test': "data/vctk/test.txt"},
-                    'vivos': {'root': 'data/vivos',
-                              'train': 'data/vivos/train.txt',
-                              'test': 'data/vivos/test.txt'}}
+        # data_dir = {'vctk': {'root': 'data/vctk/wav48',
+        #                      'train': "data/vctk/train.txt",
+        #                      'test': "data/vctk/test.txt"},
+        #             'vivos': {'root': 'data/vivos',
+        #                       'train': 'data/vivos/train.txt',
+        #                       'test': 'data/vivos/test.txt'}}
+        
+        data_path = "/content/drive/MyDrive/Colab_Notebooks/HF_contri/tunet/TUNet_main"
+        
+        data_dir = {'vctk': {'root': f'{data_path}/vctk/wav48',
+                             'train': f'{data_path}/vctk/train.txt',
+                             'test': f'{data_path}/vctk/test.txt'}}
+        
         assert dataset in data_dir.keys(), 'Unknown dataset.'
         sr = 16000  # target audio sampling rate
         ratio = 2  # downsampling ratio
